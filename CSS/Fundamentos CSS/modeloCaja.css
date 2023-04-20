@@ -1,0 +1,159 @@
+h1 {
+  border: 1px solid red;
+  padding: 5px;
+  margin: 25px;
+}
+
+p {
+  /* ancho estilo y color */
+  border: 3px dotted blue;
+  padding: 8px 10px 7px 15px;
+  margin: 14px 20px;
+}
+
+.caja-h2 {
+  border: 5px dashed green;
+  /* ancho */
+  width: 200px;
+  /* alto */
+  height: 100px;
+}
+
+.caja-uno,
+.caja-dos {
+  background-color: brown;
+  border: 3px solid fuchsia;
+  /* padding distancia del borde al contenido */
+  padding: 20px;
+  margin: 30px;
+  /* Para margin y padding 
+  1 valor = todos los lados
+  2 valores = arriba-abajo y derecha-izquierda
+  */
+  padding: 10px 25px;
+  margin: 30px 50px;
+  /* 3 valores =  arriba, derecha-izquierda y abajo*/
+  padding: 5px 15px 25px;
+  margin: 30px 20px 50px;
+  /* 4 valores = arriba, derecha, abajo, izquierda 
+  Como en las manecillas del reloj*/
+  padding: 0 5px 15px 25px;
+  margin: 10px 30px 20px 50px;
+}
+/* Los elementos de linea solo ocupan el espacio que utilizan */
+/* Los elementos de bloque utilizan todo el espacio, generando un salto de linea */
+.span-linea{
+    border: 1px solid orange;
+    background-color: aqua;
+    /* Nunca aplican padding ni margin vertical */
+    padding: 20px;
+    padding: 0 50px 0;
+}
+
+.caja-none{
+  /* Quita el cotenido */
+  display: none;
+}
+
+.li-caja{
+  display: inline;
+}
+
+.img-caja{
+  display: block;
+}
+
+.caja-hidden{
+  /* Oculta el contenido pero le reserva el espacio en el documento */
+  visibility:hidden;
+  /* visibility visible muestra otra vez el contenido */
+}
+
+.overflow{
+  background-color: aqua;
+  width: 200px;
+  height: 100px;
+  /* oculta todo lo que esta fuera del area */
+  overflow: hidden;
+  /* Crea dos barras de desplazamiento dentro del area */
+  overflow: scroll;
+  /* Crea una unica barra de desplazamiento en el sentido en el que de desborde el contenido */
+  overflow: auto;
+}
+
+.box-sizing-content{
+  background-color: fuchsia;
+  /* Cuenta el ancho y alto del contenido sin tener en cuenta el tamaño del padding y borde */
+  box-sizing: content-box;
+  width: 300px;
+  height: 200px;
+  padding: 50px;
+  border: 5px solid blue;
+}
+
+.box-sizing-border{
+  margin-top: 5px;
+  background-color: fuchsia;
+  /* Cuenta el ancho y el alto teniendo en cuenta los bordes y el padding */
+  box-sizing: border-box;
+  width: 300px;
+  height: 200px;
+  padding: 50px;
+  border: 5px solid blue;
+}
+
+/* Floats and clears */
+
+.container-floats{
+  background-color: blueviolet;
+}
+
+.float-left{
+  /* Se pone lo más a la izquierda posible que puede */
+  float: left;
+}
+
+.float-right{
+  /* Se pone lo más a la derecha que puede */
+  float: right;
+}
+
+/* Todos los elementos que estan debajo se sobre  posicionan por eso se usa clear */
+
+.container-clear{
+  /* clear limpia la flotacion para que no afecte a los elementos que se encuentran debajo, hay clear right, left o both */
+  clear: both;
+}
+
+.margin-collapse{
+  background-color: yellowgreen;
+}
+
+.margin-collapse section{
+  border: 1px solid purple;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  /* Hay una regla que dice que los margenes verticales de un elemento con otro se van a acoplar por eso el margen de la mitad no es el doble  */
+}
+
+.margin-collapse span{
+  /* Toma las propiedades de los elementos de bloque (ancho y alto) y se las aplica a los elementos de linea como span */
+  display: inline-block;
+  border: 1px solid blue;
+  /* Los margenes horizontales si se suman */
+  margin-right: 16px;
+  margin-left: 16px;
+}
+
+/* Centrado de cajas */
+
+.sitio-web{
+  border: 1px solid tomato;
+  background-color: slateblue;
+  width: 200px;
+  height: 100px;
+  padding: 30px;
+  /* Con la propiedad margin-left y right en auto posiciona automaticamente el elemento en el centro porque calcula el mismo marguen a ambos lados*/
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modelo de caja</title>
+    <link rel="stylesheet" href="modeloCaja.css" />
+  </head>
+  <body>
+    <h1>Modelo de caja</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis eum
+      maxime laboriosam quae explicabo neque necessitatibus officia laborum
+      aperiam mollitia! Asperiores eligendi fuga natus ullam quisquam optio cum,
+      quidem ducimus.
+    </p>
+    <h2 class="caja-h2">Caja</h2>
+    <p>
+      Es la forma en que CSS ve a los elementos HTML, los ve como si fueran
+      cajas:
+    </p>
+    <img src="img/caja.png" alt="" />
+    <pre>
+        <code>
+            h1{
+                border: 1px solid red;
+                padding: 5px;
+                margin: 25px;
+            }
+        </code>
+    </pre>
+    <p>Y tienen las siguientes propiedades</p>
+    <ul>
+      <li>
+        Contenido: Tamaño del elemento ancho y alto (442x37) todo lo que ocupa
+        el elemento en el viewport. Cada que se redimenciona la ventana cambia
+        este tamaño
+      </li>
+      <li>padding: relleno entre el borde y el elemento</li>
+      <li>Border: borde que encierra el elemento.</li>
+      <li>Margin: distancia entre el borde y los demas elementos</li>
+    </ul>
+    <p>Dentro del modelo de caja se consideran 4 lados:</p>
+    <ul>
+      <li>Top</li>
+      <li>Right</li>
+      <li>Button</li>
+      <li>Left</li>
+    </ul>
+    <img src="img/caja-2.png" alt="" />
+    <pre>
+        <code>
+            p{
+                border: 3px solid blue;
+                padding: 8px 10px 7px 15px;
+                margin: 14px 20px;
+            }
+        </code>
+    </pre>
+    <p>Van en sentido de las manecillas del reloj</p>
+    <hr />
+    <!-- Los div son etiquetas que no tienen por defecto padding, ni margin -->
+    <div class="caja-uno">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nisi
+      explicabo perferendis minus possimus voluptates expedita repudiandae, sunt
+      doloremque, asperiores eaque provident earum unde ab, culpa voluptatem
+      voluptas autem in.
+    </div>
+    <div class="caja-dos">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nisi
+      explicabo perferendis minus possimus voluptates expedita repudiandae, sunt
+      doloremque, asperiores eaque provident earum unde ab, culpa voluptatem
+      voluptas autem in.
+    </div>
+    <span class="span-linea"
+      >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, officia.
+      Repudiandae minima pariatur dolor doloremque fugit reprehenderit culpa.
+      Tempore sequi architecto ipsum atque soluta hic, cum tenetur autem! Natus,
+      suscipit!</span
+    >
+    <h2 id="display">Propiedad Display</h2>
+    <p>
+      La propiedad display es el comportamiento de visualización de los
+      elementos. Puede tomar los siguientes valores
+    </p>
+    <ul>
+      <li>none: quita el elemento</li>
+      <li>inline: elemento de linea, uno junto a otro</li>
+      <li>block: elemento de bloque, uno debajo del otro</li>
+      <li>
+        inline-block: comportamiento de linea pero deja modificar el ancho y el
+        alto
+      </li>
+    </ul>
+    <div class="caja-none">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque in qui
+      tempora quos molestias deserunt. Quod voluptates eligendi debitis mollitia
+      illo, unde, quo eos alias suscipit dolor numquam illum quos.
+    </div>
+    <ul>
+      <li class="li-caja">Elemento 1</li>
+      <li class="li-caja">Elemento 2</li>
+      <li class="li-caja">Elemento 3</li>
+      <li class="li-caja">Elemento 4</li>
+    </ul>
+    <img class="img-caja" src="img/caja-2.png" />
+    <img class="img-caja" src="img/caja-2.png" />
+    <img class="img-caja" src="img/caja-2.png" />
+    <h2 id="visibility">Visibility</h2>
+    <p>Muestra u oculta elementos sin cambiar la distribución del documento</p>
+    <div class="caja-hidden">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque in qui
+      tempora quos molestias deserunt. Quod voluptates eligendi debitis mollitia
+      illo, unde, quo eos alias suscipit dolor numquam illum quos.
+    </div>
+    <h2 id="overflow">Overflow</h2>
+    <p>Comportamiento del contenido que se desborda de la caja</p>
+    <p class="overflow">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+      exercitationem enim odio rerum, quos sequi in sunt nesciunt. Enim id
+      consequuntur cupiditate eos fugiat voluptas illo eaque dolor quasi
+      voluptates!
+    </p>
+    <h2 id="box-sizing">Tamaño de caja</h2>
+    <p>
+      Dependiendo del tipo de caja, si es de content o border va a tomar el
+      tamaño. Cuando es de tipo content, al ancho y alto le suma el padding y el
+      border. Cuando es border el ancho y el alto siempre va a ser el mismo sin
+      importar el padding y el border
+    </p>
+    <div class="box-sizing-content">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias autem
+      veritatis ut aliquid. Et eveniet incidunt numquam minima sapiente,
+      perferendis harum repellendus odio possimus voluptatem ut itaque
+      aspernatur iste vitae!
+    </div>
+    <div class="box-sizing-border">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias autem
+      veritatis ut aliquid. Et eveniet incidunt numquam minima sapiente,
+      perferendis harum repellendus odio possimus voluptatem ut itaque
+      aspernatur iste vitae!
+    </div>
+    <h2 id="float-clear">Propiedad float y clear</h2>
+    <p>
+      La propiedad float se utilizaba antes para realizar la maquetacion de los
+      elementos ya que puede posicionar un elemento a la derecha o izquierda. La
+      propiedad clear limpia esta flotación para que no afecte a los elementos
+      que estan despues de los elementos flotados
+    </p>
+    <article class="container-floats">
+      <section class="float-right">Este elemento flota a la derecha</section>
+      <section class="float-left">Este elemento flota a la izquierda</section>
+    </article>
+    <div class="container-clear">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, odit.
+      Ipsa, ipsum necessitatibus atque sapiente dolorum adipisci eligendi,
+      corrupti reiciendis nam consequuntur temporibus ab ad blanditiis illum
+      hic, provident beatae!
+    </div>
+    <h2>Colapso de margenes verticales</h2>
+    <article class="margin-collapse">
+      <section>Seccion 1</section>
+      <section>Seccion 2</section>
+      <section>
+        <span>Span 1</span><span>Span 2</span><span>Span 3</span>
+      </section>
+    </article>
+    <p>
+      Hay una regla que dice que los margenes verticales de un elemento con otro
+      se van a acoplar por eso el margen de la mitad no es el doble. Tratar de
+      utilizar en la maquetacion solo margin-top o margin-bottom... Nunca las
+      dos! Los margenes horizontales si se suman
+    </p>
+    <h2 id="box-center">Centrado de caja</h2>
+    <article class="sitio-web">
+      <header>Cabecera</header>
+      <main>Contenido principal</main>
+      <footer>Pie de pagina</footer>
+    </article>
+    <p>Con margin auto se puede centrar la caja completa debido a que calcula el margen de los dos lados y logra centrrlo</p>
+    <a href="index.html">Volver</a>
+  </body>
+</html>

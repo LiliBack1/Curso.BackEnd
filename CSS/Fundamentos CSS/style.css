@@ -1,0 +1,304 @@
+html{
+    /* Propiedad que permite que el scroll del sitio sea mas suave */
+    scroll-behavior: smooth;
+}
+
+/* Selectores básicos */
+/* Selector de etiqueta, selecciona todos los elementos del html */
+p{ 
+    color: #093aff;
+}
+/* id selecciona solo el id y toca poner el # */
+/* Los id son una mala practica para aplicar estilos CSS debido a que no permite la reutilización de codigo */
+#parrafo-dos{
+    background-color: #adff09;
+}
+
+/* Las clases permiten reuilizar estilos css debido a que se puede utilizar varias veces en el css*/
+.text-20{
+    font-size: 20px;
+}
+
+.text-32{
+    font-size: 32px;
+}
+
+.bg-pink{
+    background-color: #ff09bd;
+}
+
+.text-white{
+    color: white;
+}
+/* Para seleccionar los hijos directos se utiliza el simbolo de mayor que y el hijo directo que es li en este caso */
+.hijos-directos > li{
+    background-color: rgb(251, 255, 0);
+}
+/* li es un elemento de bloque que ocupa todo el espacio */
+.hijos-directos > li > b {
+    font-weight: 500;
+}
+/* A los hijos descendientes de la clase sin importar si son directos o no le aplica los estilos, solo es necesario utilizar el espacio */
+.hijos-descendientes b{
+    color: blue;
+}
+
+/* Selector de hermanos en general, le aplica el estilo unicamnete a los hermanos (que estan en el mismo nivel) que esta por debajo de la etiqueta class*/
+
+.hermanos-general ~ li{
+    background-color: #ff0909;
+}
+
+/* Le aplica los estilos unicamnete al elemento que este por debajo del elemento que lleva la clase y que esten en el mismo nivel*/
+
+.hermanos-adyacentes + li{
+    background-color: #ff0909;
+}
+
+/* Permiten agrgar estilos teniendo en cuenta los atributos de una etiqueta*/
+
+.selectores-atributos a[href] {
+    color: #ff8c09;
+/* text decoration le quita el estilo a los enlaces */
+    text-decoration: none;
+}
+
+.selectores-atributos a[target="_blank"]{
+    font-weight: bold; 
+}
+
+/* El comodin * busca todos los atributos que contentan la palabra a la que esta igualdado  */
+
+.selectores-atributos a[href*="jonmircha"]{
+    font-size: 24px;
+}
+
+/* El comodin ^ busca los atributos que comiencen con la palabra a la que se le esta igualando */
+
+.selectores-atributos a[href^="#"]{
+    background-color: #f709ff;
+    color: white;
+}
+
+/* El comodin $ busca todos los atributos que terminen con lo que esta igualado */
+
+.selectores-atributos a[href$=".com/"]{
+    background-color: rgb(93, 96, 99); 
+}
+
+/* El comodin ~  aplica el estilo si contiene la palabra si esta en una lista de palabras separadas por espacios */
+.selectores-atributos a[class~="cursos"]{
+    background-color: #093aff;
+}
+
+/* El comodin | busca las palabras que etten igualdas y que despues del texto pueda venir un guion medio y esta entre una lista de palabras separadas por espacio */
+
+.selectores-atributos a[class|="menu"]{
+    /* Estilo de la letra */
+    font-style: italic;
+}
+
+/* El selector universal le aplica los estilos a todos los elementos HTML que se tienen dentro del documento*/
+
+*{
+    /* Font-family cambia la tipografia */
+    font-family: sans-serif;
+}
+
+/* A todos los elementos dentro de la clase les aplica el estilo */
+
+.selector-universal * {
+    font-size: 24px;
+    color: #ff0909;
+}
+
+/* Las pseudoclases dan estilos dependiendo el contexto, la posicion o el estado que tenga un elemento HTML */
+
+/* Las pseudoclases se distinguen porque tienen : */
+
+/* A todos los elementos que esten dentro de form-pseudoclases y sean required*/
+.form-pseudoclases *:required{
+    border-color: #fbff09;
+}
+
+/* Hacen que el sitio sea interactivo, cuando el valor es valido se pone en verde */
+
+.form-pseudoclases *:valid{
+    border-color: #11ff09;
+}
+/* Cuanco el estado cambia a invalido se pone en rojo */
+.form-pseudoclases *:invalid{
+    border-color: #ff0909;
+}
+
+/* El foco es cuando el elemento tiene el cursor */
+
+.form-pseudoclases *:focus{
+    background-color: #09deff;
+}
+
+/* Estado deshabilitado */
+
+.form-pseudoclases *:disabled{
+    background-color: #ff09bd;
+}
+
+/* Orden para estados de los elementos a
+:link: le da el estilo predeterminado a los enlaces
+:active: Le da el estilos a los enlaces activos
+:visited: le da el estilo a los enlaces que fueron visitados
+:hover: le da el estilo cuando pasa el cursos */
+
+/* Estado de enlace visitado, tiene que ir arriba de hover para que no quite los estilos del hover */
+
+.menu-pseudoclases a:visited{
+    color: #11ff09;
+}
+
+/* El estado hover es cuando pasa el cursos por encima del elemento */
+
+.menu-pseudoclases a:hover{
+    font-size: 24px;
+    color: #ff8c09;
+}
+
+/* No solo sirve para elementos interactivos sino par cualquier tipo de elemento html */
+
+.p-pseudoclases:hover{
+    background-color: #2aff09;
+}
+
+/* Cuando se encuentra en el id temario-css en el url cambia el color de la seccion a naranja */
+#temario-css:target{
+    background-color: #ff8c09;
+}
+
+/* Le aplica el estilo al primer hijo del elemento padre que es la clase y que aparte sea de tipo li */
+
+.lista-pseudoclases li:first-child{
+    color: steelblue
+}
+
+/* Le aplica el estilo al ultimo hijo del elemento padre que es la clase y que aparte sea de tipo li */
+
+.lista-pseudoclases li:last-child{
+    color: #ff0909;
+}
+
+/* Le aplica el estilo al n hijo del elemento padre que es la clase y que aparte sea de tipo li */
+
+.lista-pseudoclases li:nth-child(6){
+    color: #ff8c09;
+}
+
+/* De 3 en 3 va aplicando el estilo */
+
+.lista-pseudoclases li:nth-child(3n){
+    font-size: 24px;
+}
+
+/* Elementos pares */
+
+.lista-pseudoclases li:nth-child(even){
+    background-color: #fbff09;
+}
+
+/* Elementos impares */
+
+.lista-pseudoclases li:nth-child(odd){
+    background-color: #09deff;
+}
+
+/* Primer elemento del tipo p  */
+.articulo-pseudoclases p:first-of-type{
+    background-color: #ff09bd;
+}
+/* En type aplican las mismas caracteristicas de child */
+.articulo-pseudoclases p:last-of-type{
+    background-color: #ff8c09;
+}
+/* Todos menos p y div*/
+.articulo-pseudoclases *:not(p,div){
+    background-color: #2aff09;
+}
+
+/* Los pseudoelementos se caracterizan por tener los :: */
+
+/* Agrega contenido antes de la clase*/
+
+.nombre-item::before{
+    content: "Nombre:";
+}
+
+.precio-item::before{
+    content: "$";
+    font-weight: bold;
+}
+/* Agrega contenido despues de la clase */
+.precio-item::after{
+    content: " COP";
+}
+
+.p-pseudoelementos::first-letter{
+    font-weight: bold;
+    font-size: 34px;
+}
+/* Los elementos que selecciono se ponen en rojo */
+.p-pseudoelementos::selection{
+    color: #ff0909;
+    background-color: #11ff09;
+}
+
+.input-pseudoelementos::placeholder{
+    color: #ff09bd;
+}
+
+/* Agrupar selectores, se hace con la coma */
+
+.form-agrupar-selectores input[type="text"],
+.form-agrupar-selectores input[type="email"],
+.form-agrupar-selectores textarea{
+    border-color: #fbff09;
+    border-width: 5px;
+    border-style: dashed;
+    background-color: #adff09;
+    font-size: 20px;
+    /* Pone la etiqueta de tipo bloque es decir que ocupe todo el espacio */
+    display: block;
+    width: 300px;
+}
+
+/* Cascada y especificidad CSS */
+
+/* Tiene un peso de 100 por lo que le pone prioridad sobre la regla de etiqueta y de clase */
+#cita-marco{
+    background-color: #09deff;
+}
+
+/* Tiene un peso de 1 */
+blockquote{
+    background-color: #2aff09;
+}
+/* Tiene un peso de 10 por lo que le pone más prioridad al estilo con clase que con etiqueta */
+/* Por cascada deberia quedar en fucsia pero como el peso del id es mayor se queda en azul */
+.cita-marco{
+    background-color: #ff09bd;
+}
+
+.herencia-span{
+    font-size: 24px;
+    background-color: #fbff09;
+}
+
+.herencia-hijo{
+    /* El elemento hijo tiene sus propiedades */
+    background-color: #ff0909;
+    /* Vuelve al tamaño por defecto sin importar la herencia */
+    font-size: initial;
+    /* Hereda el fondo del pabre el cual es amarillo */
+    background-color: inherit;
+}
+/* Etiqueta para que las etiquetas a ocupen todo el ancho y se vuelvan etiquetas de bloque */
+a{
+    display: block;
+}

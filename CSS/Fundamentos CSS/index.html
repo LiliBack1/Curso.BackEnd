@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Aprendiendo CSS</title>
+  </head>
+  <body>
+    <article id="temario-css">
+      <h1>Aprendiendo CSS</h1>
+      <h2>Cascading Style Sheets</h2>
+      <h3>Temario del curso</h3>
+      <ul>
+        <li><a href="#selectores-basicos">Selectores básicos</a></li>
+        <li><a href="#selectores-avanzados">Selectores avanzados</a></li>
+        <li><a href="#pseudoclases">Pseudoclases</a></li>
+        <li><a href="#pseudoelementos">Pseudoelementos</a></li>
+        <li><a href="#agrupacion">Agrupacion de selectores</a></li>
+        <li><a href="#algoritmo-css">Algoritmo de CSS</a></li>
+        <li>
+          <a href="#reseteo-normalizacion">Reseteo y normalización CSS</a>
+        </li>
+        <li><a href="modeloCaja.html">Módelo de caja</a></li>
+        <ul>
+          <li><a href="modeloCaja.html#display">Display</a></li>
+          <li><a href="modeloCaja.html#visibility">Visibility</a></li>
+          <li><a href="modeloCaja.html#overflow">Overflow</a></li>
+          <li><a href="modeloCaja.html#box-sizing">Tamaño de caja</a></li>
+          <li><a href="modeloCaja.html#float-clear">Propiedad float y clear</a></li>
+          <li><a href="modeloCaja.html#box-center">Centrado de caja</a></li>
+        </ul>
+        <li><a href="positions.html">Posicionamiento</a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+      </ul>
+    </article>
+    <hr />
+    <article id="selectores-basicos">
+      <h2>Selectores Básicos</h2>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam modi
+        tenetur doloremque. Dolore nihil, exercitationem asperiores error
+        debitis enim explicabo eum ipsam repellendus odio aliquam vitae.
+        Sapiente labore similique sint.
+      </p>
+      <p id="parrafo-dos">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa similique
+        enim fugiat architecto dolore, error temporibus fuga expedita, mollitia
+        incidunt est omnis veritatis accusamus voluptas sequi perferendis libero
+        quidem. Voluptas.
+      </p>
+      <!-- Se puede agregar mas de una clase al elemento con el espacio -->
+      <p class="text-32 bg-pink">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis,
+        repudiandae quas officia minima vero eligendi provident dicta! Officia
+        sed amet eligendi deleniti rerum debitis voluptatum, veritatis nulla
+        aliquam, labore sequi.
+      </p>
+      <!-- Tamaño de texto 20
+        backgroud color gray
+        color de texto yellow -->
+      <p class="text-20 bg-pink text-white">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi aut ipsa
+        nihil blanditiis sunt, culpa molestiae eum illum repellat quas est
+        laborum beatae magni. Corporis blanditiis repudiandae quia excepturi
+        qui!
+      </p>
+      <a href="#temario-css">volver</a>
+    </article>
+    <hr />
+    <article id="selectores-avanzados">
+      <h2>Selectores avanzados</h2>
+      <h3>Selectores de hijos</h3>
+      <h4>Selectores de hijos directos</h4>
+      <ul class="hijos-directos">
+        <!-- Los hijos directos son li -->
+        <li><b>Primavera</b></li>
+        <li><b>Verano</b></li>
+        <li><b>Otoño</b></li>
+        <li><b>Inverno</b></li>
+      </ul>
+      <h4>Selectores de hijos descendientes</h4>
+      <ul class="hijos-descendientes">
+        <li><b>Primavera</b></li>
+        <li><b>Verano</b></li>
+        <li><b>Otoño</b></li>
+        <li><b>Inverno</b></li>
+      </ul>
+      <h3>Selectores de hermanos</h3>
+      <h4>Selectores de hermanos (general)</h4>
+      <ul>
+        <li><b>Primavera</b></li>
+        <li class="hermanos-general"><b>Verano</b></li>
+        <li><b>Otoño</b></li>
+        <li><b>Inverno</b></li>
+      </ul>
+      <h4>Selector de hermanos adyacente</h4>
+      <ul>
+        <li><b>Primavera</b></li>
+        <li class="hermanos-adyacentes"><b>Verano</b></li>
+        <li><b>Otoño</b></li>
+        <li><b>Inverno</b></li>
+      </ul>
+      <h3>Selectores de atributos</h3>
+      <nav class="selectores-atributos">
+        <!-- ul>li*6>a[target="_black"] -->
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li>
+            <a
+              class="menu-item cursos button"
+              href="https://jonmircha.com/"
+              target="_blank"
+              >Cursos</a
+            >
+          </li>
+          <li><a href="https://jonmircha.com/" target="_blank">Blog</a></li>
+          <li>
+            <a
+              class="menu-item notas button"
+              href="https://jonmircha.com/"
+              target="_blank"
+              >Notas</a
+            >
+          </li>
+          <li><a href="https://jonmircha.com/" target="_blank">CV</a></li>
+          <li><a href="https://jonmircha.com/" target="_blank">Ahora</a></li>
+        </ul>
+      </nav>
+      <h3>Selector universal</h3>
+      <ul class="selector-universal">
+        <li><b>Primavera</b></li>
+        <li><b>Verano</b></li>
+        <li><b>Otoño</b></li>
+        <li><b>Inverno</b></li>
+      </ul>
+      <a href="#temario-css">volver</a>
+    </article>
+    <hr />
+    <article id="pseudoclases">
+      <h2>Pseudoclases</h2>
+      <h3>Pseudoclases de estado</h3>
+      <form class="form-pseudoclases">
+        <input
+          type="text"
+          name="nombre"
+          placeholder="Escribe tu nombre"
+          required
+        />
+        <br />
+        <input
+          type="email"
+          name="correo"
+          placeholder="Escribe tu correo"
+          required
+        />
+        <br />
+        <input type="submit" disabled />
+        <input type="submit" />
+      </form>
+      <nav class="menu-pseudoclases">
+        <a href="#seccion1">Seccion 1</a>
+        <a href="#seccion2">Seccion 2</a>
+        <a href="#seccion3">Seccion 3</a>
+        <a href="#seccion4">Seccion 4</a>
+      </nav>
+      <p class="p-pseudoclases">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio sunt
+        sapiente, quas, blanditiis ipsam nihil iusto perspiciatis impedit
+        dolores cupiditate ducimus. Ipsa asperiores, doloremque quibusdam
+        voluptatum incidunt magni laboriosam consectetur.
+      </p>
+      <h3>Pseudoclases por posicion y tipo</h3>
+      <ol class="lista-pseudoclases">
+        <li>Enero</li>
+        <li>Febrero</li>
+        <li>Marzo</li>
+        <li>Abril</li>
+        <li>Mayo</li>
+        <li>Junio</li>
+        <li>Julio</li>
+        <li>Agosto</li>
+        <li>Septiembre</li>
+        <li>Octubre</li>
+        <li>Noviembre</li>
+        <li>Diciembre</li>
+      </ol>
+      <article class="articulo-pseudoclases">
+        <header>Esto es un header</header>
+        <p>Este es un parrafo</p>
+        <div>Esto es un div</div>
+        <p>Este es un parrafo</p>
+        <section>Esto es una seccion</section>
+        <p>Este es un parrafo</p>
+        <div>Esto es un div</div>
+        <p>Este es un parrafo</p>
+        <footer>Esto es un footer</footer>
+      </article>
+      <a href="#temario-css">volver</a>
+    </article>
+    <hr />
+    <article id="pseudoelementos">
+      <h2>Pseudoelementos</h2>
+      <p>
+        <i>Tablet</i>
+        <span class="nombre-item">Tablet</span>
+        <span class="precio-item">1000000</span>
+      </p>
+      <p class="p-pseudoelementos">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora dicta
+        placeat aut minus tenetur consequatur alias ullam itaque sint,
+        voluptatem, fugit, inventore magnam non illum nobis veritatis eos ipsa?
+        Vitae?
+      </p>
+      <input
+        type="text"
+        class="input-pseudoelementos"
+        placeholder="Escribe tu nombre"
+      />
+      <a href="#temario-css">volver</a>
+    </article>
+    <hr />
+    <article id="agrupacion">
+      <h2>Agrupacion de selectores</h2>
+      <form class="form-agrupar-selectores">
+        <input type="text" name="nombre" placeholder="Escribe tu nombre" />
+        <input type="email" name="correo" placeholder="Escribe tu correo" />
+        <textarea
+          name="comentarios"
+          placeholder="Escribe tus comentarios"
+          cols="30"
+          rows="10"
+        ></textarea>
+        <input type="submit" />
+      </form>
+      <a href="#temario-css">volver</a>
+    </article>
+    <article id="algoritmo-css">
+      <h2>Algoritmo de CSS</h2>
+      <p>
+        El algoritmo de CSS es la forma en que el navegador aplica los estilos
+        al documento HTML. Es vital entender este concepto para que entiendas
+        como se aplican y en algunas ocaciones se sobreescriben las reglas CSS
+      </p>
+      <ol>
+        <li>La cáscada</li>
+        <li>La espeficidad</li>
+        <li>La herencia</li>
+      </ol>
+      <h3>La cascada</h3>
+      <p>
+        Mecanismo que tiene el navegador web para ir aplicando los estilos y
+        toma en cuenta 3 aspectos en general en el siguiente orden, como en el
+        modelo cascada:
+      </p>
+      <ol>
+        <li><i>El origen del código</i></li>
+        <ol type="a">
+          <li>
+            <b>User Agent:</b> estilos por defecto que aplica el navegador a las
+            etiquetas
+          </li>
+          <li>
+            <b>Personalizaciones del usuario:</b> Personalizaciones que le
+            hacemos al sistema operativo por ejemplo el modo claro o el modo
+            oscuro
+          </li>
+          <li>
+            <b>Código CSS:</b>Estilos de autor, es decir el codigo css que
+            escribe el desarrollador
+          </li>
+        </ol>
+        <li><i>La Especifidad del selector</i></li>
+        <li><i>Orden de aparición</i>: Orden en el que aparecen los estilos</li>
+      </ol>
+      <h3>Especifidad</h3>
+      <p>
+        Peso especifico de la propiedad, si un selector tiene mayor peso que
+        otro, no toma el orden de cascada. El peso de la propiedad aparece
+        cuando se pone el cursor encima de la regla css.
+        <i>Selector Specificity</i>
+      </p>
+      <img src="img/especificidad.png" />
+      <p>El peso se calcula de la siguiente forma</p>
+      <table border="1px">
+        <tr>
+          <th>Selector</th>
+          <th>Peso</th>
+        </tr>
+        <tr>
+          <td>Etiquetas y pseudoelementos</td>
+          <td>0,0,0,1</td>
+        </tr>
+        <tr>
+          <td>Clases, atributos y pseudoclases</td>
+          <td>0,0,1,0</td>
+        </tr>
+        <tr>
+          <td>Identificadores</td>
+          <td>0,1,0,0</td>
+        </tr>
+        <tr>
+          <!-- Los estilos en linea son los estilos que se ponen dentro de un elemento HTML -->
+          <td>Estilos de linea</td>
+          <td>1,0,0,0</td>
+        </tr>
+        <tr>
+          <td>!Important</td>
+          <td>Rompe la especificidad</td>
+        </tr>
+      </table>
+      <blockquote id="cita-marco" class="cita-marco">
+        Sé tolerante con los demas y estricto contigo mismo -
+        <cite>Marco Aurelio</cite>
+      </blockquote>
+      <h3>Herencia</h3>
+      <p>
+        Es la capacidad de un selector de obtener los valores de sus ancestros
+        (padres, abuelos,...) más cercanos, para aplicarla se usa el valor
+        inherit, si queremos evitarla podemos asignar otro valor o inicializar
+        la propiedad en cuestion con el valor initial. Hay propiedades que no se
+        heredan como el borde, fondo. Las que si o si se heredan son las que
+        tiene que ver con la tipografia
+      </p>
+
+      <span class="herencia-span"
+        >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat est
+        dolores animi perspiciatis voluptatum quidem odit eligendi
+        exercitationem voluptas ut, accusantium earum dignissimos porro, totam
+        rerum corporis nesciunt cupiditate provident?
+        <span class="herencia-hijo">Elemento hijo</span>
+      </span>
+      <br />
+      <a href="#temario-css">volver</a>
+    </article>
+    <article id="reseteo-normalizacion">
+      <h2>Reseteo y normalización de estilos</h2>
+      <p>Sirven para normalizar los estilos css para todos los navegadores</p>
+      <a href="https://necolas.github.io/normalize.css/">Normalize CSS</a>
+      <a href="#temario-css">volver</a>
+    </article>
+  </body>
+</html>
